@@ -18,11 +18,19 @@
     display: flex;
     list-style: none;
     padding-left: 0;
+    font-size: larger;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
   .nav-link-item {
     padding-right: 2rem;
   }
   .nav-link-text {
-    color: black;
+    color: blue;
   }
-
+  .page-title {
+  color: gray;
+  font-size: larger;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  }

@@ -7,9 +7,10 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
+  pageTitle
 } from "./layout.module.css";
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ heading, pageTitle, children }) => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -27,7 +28,7 @@ const Layout = ({ pageTitle, children }) => {
       <nav>
         <ul className={navLinks}>
             <li className={navLinkItem}>
-              <Link to="/">Home</Link>
+              <Link to="/" className={navLinkText}>Home</Link>
             </li>
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
@@ -42,7 +43,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={'text-3x1 text-red-700 font-bold ${pageTitle}'}>{pageTitle}</h1>
+        <h1 className={pageTitle}>{pageTitle}</h1>
         {children}
       </main>
     </div>

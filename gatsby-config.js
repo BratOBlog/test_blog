@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `test_blog`,
+    title: `Hike Blog`,
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-netlify-cms", "gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
@@ -19,10 +19,10 @@ module.exports = {
     },
     __key: "images"
   }, {
-    resolve: 'gatsby-source-filesystem',
+    resolve: "gatsby-source-filesystem",
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      name: `blog`,
+      path: `${__dirname}/blog`,
     },
     __key: "pages"
   }]
