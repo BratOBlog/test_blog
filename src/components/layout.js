@@ -10,7 +10,7 @@ import {
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
-  const hideHomeLink = true;
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -26,13 +26,11 @@ const Layout = ({ pageTitle, children }) => {
       <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
-          {!hideHomeLink && (
             <li className={navLinkItem}>
               <Link to="/">Home</Link>
             </li>
-          )}
           <li className={navLinkItem}>
-            <Link to="/about" className="text-blue-500">
+            <Link to="/about" className={navLinkText}>
               About
             </Link>
           </li>
@@ -44,7 +42,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={pageTitle}>{pageTitle}</h1>
+        <h1 className={'text-3x1 text-red-700 font-bold ${pageTitle}'}>{pageTitle}</h1>
         {children}
       </main>
     </div>
