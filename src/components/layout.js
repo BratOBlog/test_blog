@@ -2,12 +2,12 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
+  heading,
   navLinks,
   navLinkItem,
   navLinkText,
-  heading,
-  pageTitle,
   siteTitle} from "./layout.module.css";
+  import * as styles from '../styles/global.css'
 
 const Layout = ({ heading, pageTitle, children }) => {
 
@@ -42,7 +42,7 @@ const Layout = ({ heading, pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className={pageTitle}>{pageTitle}</h1>
+        <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
     </div>
