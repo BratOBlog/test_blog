@@ -13,6 +13,7 @@
 
   .heading {
     color: rebeccapurple;
+    font-size: 30px
   }
   .nav-links {
     display: flex;

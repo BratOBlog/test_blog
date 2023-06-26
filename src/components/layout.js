@@ -2,13 +2,12 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
-  heading,
   navLinks,
   navLinkItem,
   navLinkText,
-  siteTitle,
-  pageTitle
-} from "./layout.module.css";
+  heading,
+  pageTitle,
+  siteTitle} from "./layout.module.css";
 
 const Layout = ({ heading, pageTitle, children }) => {
 
@@ -50,4 +49,4 @@ const Layout = ({ heading, pageTitle, children }) => {
   );
 };
 
-export default Layout;
+export default Layout
