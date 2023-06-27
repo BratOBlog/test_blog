@@ -55,7 +55,7 @@
     margin: 0 auto;
   }
   nav {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     margin: 40px auto;
   }
@@ -77,4 +77,9 @@
     text-align: center;
     color: #bbb;
     margin: 40px auto;
+  }
+  
+  .post-name {
+    font-size: x-large;
+    color: blue;
   }
