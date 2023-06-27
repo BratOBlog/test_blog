@@ -21,28 +21,41 @@ const Layout = ({ heading, pageTitle, children }) => {
     }
   `);
 
+  const isHomePage = pageTitle === "Home Page"; 
+
   return (
     <div className={container}>
-      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
+      <header className={siteTitle}>
+        <Link to="/">{data.site.siteMetadata.title}</Link>
+      </header>
       <nav>
         <ul className={navLinks}>
-            <li className={navLinkItem}>
-              <Link to="/" className={navLinkText}>Home</Link>
-            </li>
+          <li className={navLinkItem}>
+            <Link to="/" className={navLinkText}>
+              Home
+            </Link>
+          </li>
           <li className={navLinkItem}>
             <Link to="/about" className={navLinkText}>
               About
             </Link>
           </li>
-        <li className={navLinkItem}>
+          <li className={navLinkItem}>
             <Link to="/blog" className={navLinkText}>
               Blog
             </Link>
           </li>
-        </ul>
+       <li>
+        {!isHomePage && (
+          <Link to="/" className={navLinkText}>
+            Back to Home
+          </Link>
+        )}
+        </li>
+         </ul>
       </nav>
       <main>
-        <h1 className="text-blue-800 underline font-bold  ${heading}">{pageTitle}</h1>
+        <h1 className={heading}>{pageTitle}</h1>
         {children}
       </main>
     </div>

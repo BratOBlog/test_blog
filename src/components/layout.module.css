@@ -79,7 +79,7 @@
     margin: 40px auto;
   }
   
-  .post-name {
-    font-size: x-large;
-    color: blue;
-  }
+.markdown h1 {
+  font-size: 30px;
+  color:yellow;
+}
