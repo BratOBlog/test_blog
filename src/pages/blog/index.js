@@ -5,6 +5,7 @@ import Seo from '../../components/seo'
 
 const BlogPage = ({ data }) => {
   return (
+    <div className="markdown">
     <Layout>
       {
         data.allMdx.nodes.map(node => (
@@ -20,6 +21,7 @@ const BlogPage = ({ data }) => {
         ))
       }
     </Layout>
+    </div>
   )
 }
 

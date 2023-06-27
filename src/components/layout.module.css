@@ -33,7 +33,6 @@
   * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
     font-family: "Montserrat";
    
   }
@@ -82,4 +81,5 @@
 .markdown h1 {
   font-size: 30px;
   color:yellow;
+  text-align: center;
 }
