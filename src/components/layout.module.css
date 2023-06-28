@@ -1,3 +1,30 @@
+h1
+h2
+h3
+h4
+h5
+h6 {
+color:black;
+text-align: center;
+}
+
+h1{
+  font-size: 30px;
+}
+
+h2{
+  font-size: 25px;
+}
+
+
+h3{
+  font-size: 20px;
+}
+
+h4{
+  font-size: 15px;
+}
+
 .container {
   background-color: rgb(247, 247, 247);
   margin: auto;
@@ -6,9 +33,10 @@
 }
 .site-title {
   font-size: 3rem;
-  color: red;
+  color: rgb(218, 62, 62);
   font-weight: 700;
   margin: 3rem 0;
+  text-align:center;
 }
 
 .heading {
@@ -74,11 +102,5 @@ footer p{
   text-align: center;
   color: #bbb;
   margin: 40px auto;
-}
-
-h1 {
-font-size: 30px;
-color:black;
-text-align: center;
 }
 
