@@ -2,14 +2,14 @@ import * as React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import {
   container,
-  heading,
+  header,
   navLinks,
   navLinkItem,
   navLinkText,
   siteTitle} from "./layout.module.css";
   import * as styles from '../styles/global.css'
 
-const Layout = ({ heading, pageTitle, children }) => {
+const Layout = ({ header, pageTitle, children }) => {
 
   const data = useStaticQuery(graphql`
     query {
@@ -24,26 +24,14 @@ const Layout = ({ heading, pageTitle, children }) => {
     const isHomePage = pageTitle === "Home Page";
   
     return (
-      <div className={container}> <header>
-      <Link to="/">{data.site.siteMetadata.title}</Link>
-    </header>
+      <div className={`${container}`}>
+      <header>
+      {data.site.siteMetadata.title}
         <nav>
-          <ul className={`bg-green-300 opacity-30 flex align-items-evenly ${navLinks}`}>
-            {!isHomePage && (
-              <li className={navLinkItem}>
-                <Link to="/" className={navLinkText}>
-                  Home
-                </Link>
-              </li>
-            )}
+          <ul className={`flex align-items-evenly ${navLinks}`}>
             <li className={navLinkItem}>
-              <Link to="/about" className={navLinkText}>
-                About
-              </Link>
-            </li>
-            <li className={navLinkItem}>
-              <Link to="/blog" className={navLinkText}>
-                Blog
+              <Link to="/author" className={navLinkText}>
+                Author
               </Link>
             </li>
             <li>
@@ -55,11 +43,15 @@ const Layout = ({ heading, pageTitle, children }) => {
             </li>
           </ul>
         </nav>
+        </header>
+
         <main>
-          <h1 className={heading}>{pageTitle}</h1>
+          <h1>{pageTitle}</h1>
           {children}
+
+          
         </main>
-      </div>
+        </div>
     );
   };
   
