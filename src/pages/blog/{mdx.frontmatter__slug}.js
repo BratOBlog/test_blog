@@ -5,12 +5,14 @@ import Seo from '../../components/seo'
 
 const BlogPost = ({ data, children }) => {
   return (
-    <div className="markdown">
     <Layout pageTitle={data.mdx.frontmatter.title}>
+    
       <p>{data.mdx.frontmatter.date}</p>
-      {children}
+        <div className="prose">
+      {children} 
+      </div>
     </Layout>
-    </div>
+   
   )
 }
 
@@ -24,6 +26,7 @@ export const query = graphql`
     }
   }
 `
+
 
 export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />
 

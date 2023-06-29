@@ -1,16 +1,9 @@
-import * as React from "react";
+import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import {
-  container,
-  heading,
-  navLinks,
-  navLinkItem,
-  navLinkText,
-  siteTitle} from "./layout.module.css";
-  import * as styles from '../styles/global.css'
+import { container, navLinks, navLinkItem, navLinkText } from "./layout.module.css";
+import * as styles from "../styles/global.css";
 
-const Layout = ({ heading, pageTitle, children }) => {
-
+const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -21,45 +14,39 @@ const Layout = ({ heading, pageTitle, children }) => {
     }
   `);
 
-  const isHomePage = pageTitle === "Home Page"; 
+  const isHomePage = pageTitle === "Home Page";
 
   return (
-    <div className={container}>
-      <header className={siteTitle}>
-        <Link to="/">{data.site.siteMetadata.title}</Link>
-      </header>
+    <div className={`bg-gray-100 min-h-screen ${container}`}>
+      <header className="bg-blue-500 text-white text-center">
+        <div className="container mx-auto">
+          <h1 className="text-2xl font-bold">{data.site.siteMetadata.title}</h1>
+        </div>
+  
       <nav>
-        <ul className={navLinks}>
+        <ul className={`flex justify-items-evenly ${navLinks}`}>
           <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
+            <Link to="/author" className={navLinkText}>
+              Author
             </Link>
           </li>
-          <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
-              About
-            </Link>
+          <li>
+            {!isHomePage && (
+              <Link to="/" className={navLinkText}>
+                Back to Home
+              </Link>
+            )}
           </li>
-          <li className={navLinkItem}>
-            <Link to="/blog" className={navLinkText}>
-              Blog
-            </Link>
-          </li>
-       <li>
-        {!isHomePage && (
-          <Link to="/" className={navLinkText}>
-            Back to Home
-          </Link>
-        )}
-        </li>
-         </ul>
+        </ul>
       </nav>
-      <main>
-        <h1 className={heading}>{pageTitle}</h1>
+      </header>
+
+      <main className="container mx-auto py-4 px-6">
+        <h1 className="text-3xl font-bold mb-4">{pageTitle}</h1>
         {children}
       </main>
     </div>
   );
 };
 
-export default Layout
+export default Layout;

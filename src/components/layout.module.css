@@ -1,85 +1,75 @@
+
 .container {
-    background-color: rgb(186, 205, 223);
-    margin: auto;
-    max-width: 500px;
-    font-family: sans-serif;
-  }
-  .site-title {
-    font-size: 3rem;
-    color: red;
-    font-weight: 700;
-    margin: 3rem 0;
-  }
-
-  .heading {
-    color: olive;
-    font-size: 30px;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-    font-size: larger;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  .nav-link-item {
-    padding-right: 2rem;
-  }
-  .nav-link-text {
-    color: blue;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-family: "Montserrat";
-   
-  }
-  html, body {
-    min-height: 100%;
-  }
-  body {
-    background: white;
-    background-repeat: no-repeat;
-  }
-  p {
-    margin: 16px auto;
-    line-height: 1.5em;
-  }
-  
-  /* layout & nav */
-  .layout {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  nav {
-    display: flex;
-    grid-template-columns: 1fr 1fr;
-    margin: 40px auto;
-  }
-  nav .links {
-    display: inline-block;
-    text-align: right;
-  }
-  nav a {
-    display: inline-block;
-    margin-left: 20px;
-    font-weight: 400;
-    padding-bottom: 8px;
-    border-bottom: 3px solid transparent;
-  }
-  nav a:hover {
-    border-color: white;
-  }
-  footer p{
-    text-align: center;
-    color: #bbb;
-    margin: 40px auto;
-  }
-  
-.markdown h1 {
-  font-size: 30px;
-  color:yellow;
+  background-color: rgb(252, 236, 236);
+  margin: auto;
+  max-width: 500px;
+  font-family: sans-serif;
 }
+.site-title {
+  font-size: 3rem;
+  color: rgb(15, 5, 5);
+  font-weight: 700;
+  margin: 3rem 0;
+ float: right;
+}
+.header {
+border: 2px solid black;
+margin: auto;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  font-size: larger;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background-color: 30%;
+}
+.nav-link-item {
+  padding-right: 2rem;
+}
+.nav-link-text {
+  color: rgb(4, 4, 14);
+}
+
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  background: white;
+  background-repeat: no-repeat;
+}
+
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  margin: 40px auto;
+}
+
+nav .links {
+  display: inline-block;
+  text-align: right;
+}
+nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover {
+  border-color: rgb(9, 9, 78);
+}
+
