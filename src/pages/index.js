@@ -11,7 +11,7 @@ const IndexPage = ({data}) => {
     <main pageTitle="Home Page">
       <Layout>
       <h1 className="text-3xl font-bold">Welcome to my blog!</h1>
-      <p className="mt-4">This is a test blog.</p>
+      <p className="mt-4">This is a test.</p>
 
       <StaticImage
         alt="Beautiful montain landscape with trees"
@@ -20,7 +20,6 @@ const IndexPage = ({data}) => {
 
       {
         data.allMdx.nodes.map(node => (    
-        <div className="markdown">
           <article className="text-center m-4" key={node.id}>
             <h2 className=" text-blue-500 font-extrabold text-3xl ">
               <Link to={`/blog/${node.frontmatter.slug}`}>
@@ -30,7 +29,7 @@ const IndexPage = ({data}) => {
             <p>Posted: {node.frontmatter.date}</p>
             <p>{node.excerpt}</p>
           </article>
-          </div>
+
         ))
       }
     </Layout>
@@ -54,6 +53,8 @@ query {
   }
 }
 `
+
+
 export const Head = () => <Seo title="Home Page" />
 
 export default IndexPage

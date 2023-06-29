@@ -5,10 +5,14 @@ import Seo from '../../components/seo'
 
 const BlogPost = ({ data, children }) => {
   return (
-    <Layout className="markdown" pageTitle={data.mdx.frontmatter.title}>
+    <Layout pageTitle={data.mdx.frontmatter.title}>
+    
       <p>{data.mdx.frontmatter.date}</p>
-      {children}
+        <div className="prose">
+      {children} 
+      </div>
     </Layout>
+   
   )
 }
 
