@@ -18,8 +18,7 @@ const IndexPage = ({data}) => {
         src="../images/mountain.jpg"
       />
 
-      {
-        data.allMdx.nodes.map(node => (    
+      {data.allMdx.nodes.map(node => (    
           <article className="text-center m-4" key={node.id}>
             <h2 className=" text-blue-500 font-extrabold text-3xl ">
               <Link to={`/blog/${node.frontmatter.slug}`}>
