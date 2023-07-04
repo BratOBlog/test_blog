@@ -4,27 +4,27 @@
 module.exports = {
   siteMetadata: {
     title: `Hike Blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png"
-      }
+        icon: "src/images/icon.png",
+      },
     },
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/"
+        path: "./src/images/",
       },
-      __key: "images"
+      __key: "images",
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -32,7 +32,20 @@ module.exports = {
         name: `blog`,
         path: `${__dirname}/src/blog`,
       },
-      __key: "pages"
-    }
-  ]
+      __key: "pages",
+    },
+    {
+      resolve: "gatsby-source-custom-api",
+      options: {
+          url: "https://dummyjson.com/quotes?limit=3"
+          rootKey: "quotes",
+                schemas: {
+                  quotes: `
+                        id: number
+                        quote: string
+                        author: string
+                    `,
+      },
+    },
+  ],
 };

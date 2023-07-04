@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
+import MyQuote from '../pages/quote'
 
 
 const IndexPage = ({data}) => {
@@ -17,6 +18,9 @@ const IndexPage = ({data}) => {
         alt="Beautiful montain landscape with trees"
         src="../images/mountain.jpg"
       />
+
+      <MyQuote />
+      
 
       {data.allMdx.nodes.map(node => (    
           <article className="text-center m-4" key={node.id}>
