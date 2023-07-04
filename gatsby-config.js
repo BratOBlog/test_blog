@@ -38,13 +38,6 @@ module.exports = {
       resolve: "gatsby-source-custom-api",
       options: {
           url: "https://dummyjson.com/quotes?limit=3"
-          rootKey: "quotes",
-                schemas: {
-                  quotes: `
-                        id: number
-                        quote: string
-                        author: string
-                    `,
       },
     },
   ],
