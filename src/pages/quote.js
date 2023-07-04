@@ -6,12 +6,12 @@ const MyQuote = ({ data }) => {
 
   return (
     <div>
-      {quotes.map(({ quote, author }, index) => (
-        <div key={index}>
+      {quotes.map(({ quote, author }) =>
+        <div>
           <p>{quote}</p>
           <p>- {author}</p>
         </div>
-      ))}
+      )}
     </div>
   );
 };
