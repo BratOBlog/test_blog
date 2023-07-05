@@ -18,13 +18,13 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div className={`bg-gray-100 min-h-screen ${container}`}>
-      <header className="bg-blue-500 text-white text-center">
-        <div className="container mx-auto">
+      <header className="bg-green-300 text-white">
+        <div>
           <h1 className="text-2xl font-bold">{data.site.siteMetadata.title}</h1>
         </div>
   
-      <nav>
-        <ul className={`flex justify-items-evenly ${navLinks}`}>
+      <nav className=" border-black flex flex-row justify-end items-end">
+        <ul classNAme={navLinks}>
           <li className={navLinkItem}>
             <Link to="/author" className={navLinkText}>
               Author

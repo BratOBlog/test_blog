@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../components/seo'
-import MyQuote from '../pages/quote'
+import MyQuote from '../pages/blog/quote'
 
 
 const IndexPage = ({data}) => {
@@ -14,12 +14,14 @@ const IndexPage = ({data}) => {
       <h1 className="text-3xl font-bold">Welcome to my blog!</h1>
       <p className="mt-4">This is a test.</p>
 
+<div className="flex justify-center items-center border-black p-1 m-0">
       <StaticImage
         alt="Beautiful montain landscape with trees"
         src="../images/mountain.jpg"
       />
 
-      <MyQuote />
+      <MyQuote  />
+      </div>
       
 
       {data.allMdx.nodes.map(node => (    

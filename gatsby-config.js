@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: "gatsby-source-custom-api",
       options: {
-          url: "https://dummyjson.com/quotes?limit=3"
+          url: "https://dummyjson.com/quotes?limit=40"
       },
     },
   ],
