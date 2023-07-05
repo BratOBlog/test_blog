@@ -1,19 +1,14 @@
 
-/*.container {
-  background-color: rgb(252, 236, 236);
+.container {
   font-family: sans-serif;
 }
-.site-title {
-  font-size: 3rem;
-  color: rgb(15, 5, 5);
-  font-weight: 700;
-  margin: 3rem 0;
- float: right;
-}
+
 .header {
-border: 2px solid black;
+  display: flex;
 margin: auto;
+background-color: rgb(194, 128, 48);
 }
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -30,7 +25,6 @@ margin: auto;
   color: rgb(4, 4, 14);
 }
 
-
 html, body {
   min-height: 100%;
 }
@@ -38,6 +32,7 @@ html, body {
 body {
   background: white;
   background-repeat: no-repeat;
+  background-clip: border-box;
 }
 
 p {
@@ -47,13 +42,12 @@ p {
 
 .layout {
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 nav {
   display: flex;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
+  justify-content: flex-end;
+  margin: auto;
 }
 
 nav .links {
@@ -70,5 +64,3 @@ nav a {
 nav a:hover {
   border-color: rgb(9, 9, 78);
 }
-
-*/
