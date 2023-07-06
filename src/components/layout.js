@@ -23,8 +23,8 @@ const Layout = ({ pageTitle, children }) => {
               {data.site.siteMetadata.title}
             </span>
           </div>
-          <ul className="md:flex md:items-center">
-            <li className="mx-4">
+          <ul class="md:flex md:items-center">
+            <li className="mx-4 my-6 md:my-0">
               <Link
                 to="/"
                 className="text-xl hover:text-yellow-500 duration-500 "
@@ -32,7 +32,7 @@ const Layout = ({ pageTitle, children }) => {
                 HOME
               </Link>
             </li>
-            <li className="mx-4">
+            <li className="mx-4 my-6 md:my-0">
               <Link
                 to="/author"
                 className="text-xl hover:text-yellow-500 duration-500 "
@@ -47,7 +47,7 @@ const Layout = ({ pageTitle, children }) => {
 
       <main className="container mx-auto py-4 px-6 text-center">
         <h1 className="text-3xl font-bold mb-4">{pageTitle}</h1>
-        {children}
+      {children}
       </main>
     </div>
   );

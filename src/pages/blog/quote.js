@@ -29,11 +29,11 @@ const MyQuote = () => {
   }, []);
 
   return (
-    <div>
-      {randomQuote && (
+    <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md p-4">
+    {randomQuote && (
       <div key={randomQuote.quote}>
         <p className="italic">{randomQuote.quote}</p>
-        <p>- {randomQuote.author}</p>
+        <p className="text-right">- {randomQuote.author}</p>
       </div>
       )}
     </div>

@@ -6,9 +6,9 @@ import Seo from "../../components/seo";
 const BlogPost = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <div style={{ width: "500px", margin: "auto" }} className="text-justify">
-        <p>{data.mdx.frontmatter.date}</p>
-        <div className="prose">{children}</div>
+      <div style={{ width: "500px", margin: "auto" }}>
+        <p className="my-6">{data.mdx.frontmatter.date}</p>
+        <div className="prose text-justify">{children}</div>
       </div>
     </Layout>
   );
