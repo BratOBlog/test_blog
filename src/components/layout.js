@@ -1,9 +1,9 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import { container, navLinks, navLinkItem, navLinkText } from "./layout.module.css";
-import * as styles from "../styles/global.css";
+import GoogleSearch from "../components/search"
 
 const Layout = ({ pageTitle, children }) => {
+  
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -14,32 +14,35 @@ const Layout = ({ pageTitle, children }) => {
     }
   `);
 
-  const isHomePage = pageTitle === "Home Page";
-
   return (
-    <div className={`bg-gray-100 min-h-screen ${container}`}>
-      <header className="bg-yellow-400 border-gray-600">
-        <div>
-          <h1 className="text-2xl font-bold">{data.site.siteMetadata.title}</h1>
-        </div>
-  
-        
-      <nav>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/author" className={navLinkText}>
-              Author
-            </Link>
-          </li>
-          <li>
-            {!isHomePage && (
-              <Link to="/" className={navLinkText}>
-                Back to Home
+    <div>
+      <header>
+        <nav className="p-5 bg-emerald-500 shadow md:flex md:items-center md:justify-between">
+          <div>
+            <span className="text-2xl font-bold cursor-pointer">
+              {data.site.siteMetadata.title}
+            </span>
+          </div>
+          <ul className="md:flex md:items-center">
+            <li className="mx-4">
+              <Link
+                to="/"
+                className="text-xl hover:text-yellow-500 duration-500 "
+              >
+                HOME
               </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+            </li>
+            <li className="mx-4">
+              <Link
+                to="/author"
+                className="text-xl hover:text-yellow-500 duration-500 "
+              >
+                Author
+              </Link>
+            </li>
+            <GoogleSearch />
+          </ul>
+        </nav>
       </header>
 
       <main className="container mx-auto py-4 px-6 text-center">
