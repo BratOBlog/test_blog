@@ -37,7 +37,13 @@ module.exports = {
     {
       resolve: "gatsby-source-custom-api",
       options: {
-          url: "https://dummyjson.com/quotes?limit=40"
+        url: "https://dummyjson.com/quotes?limit=40",
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
   ],
