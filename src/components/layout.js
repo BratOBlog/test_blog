@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import GoogleSearch from "../components/search"
+import Footer from "../components/footer"
 
 const Layout = ({ pageTitle, children }) => {
   
@@ -49,6 +50,8 @@ const Layout = ({ pageTitle, children }) => {
         <h1 className="text-3xl font-bold mb-4">{pageTitle}</h1>
       {children}
       </main>
+
+      <Footer />
     </div>
   );
 };
