@@ -51,7 +51,7 @@ const Layout = ({ pageTitle, children }) => {
       {children}
       </main>
 
-      <Footer />
+      <Footer className="mt-8"/>
     </div>
   );
 };

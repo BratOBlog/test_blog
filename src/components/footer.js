@@ -2,12 +2,9 @@ import React from 'react';
 import {
   MDBFooter,
   MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBIcon,
   MDBBtn
 } from 'mdb-react-ui-kit';
-import { library } from '@fortawesome/fontawesome-svg-core';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload} from '@fortawesome/free-solid-svg-icons';
 import { faGhost} from '@fortawesome/free-solid-svg-icons';
@@ -39,6 +36,7 @@ export default function Footer() {
             className='text-dark m-1'
             href='#!'
             role='button'
+            placeholder='This is a Ghost icon'
           >
             <FontAwesomeIcon icon={faGhost} />
           </MDBBtn>
