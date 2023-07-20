@@ -6,13 +6,18 @@ media_folder: static/images
 public_folder: /images
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "src/blog"
+  - name: posts
+    label: Posts
+    folder: src/blog
     create: true
-    slug: "{"{title}"}_{"{year}}-{{month}}-{{day}"}_{"{slug}"}"
+    format: mdx
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: 'slug', label: 'Slug', widget: 'string' }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Date
+        widget: datetimes
+      - name: body
+        label: Body
+        widget: markdown
