@@ -1,0 +1,21 @@
+---
+title: "Testing again "
+date: 23 Jul 24th
+slug: testing-again
+---
+# The shadows are just like the highlights, but we're going in the opposite direction.
+
+God gave you this gift of imagination. Use it. It's so important to do something every day that will make you happy. Nothing's gonna make your husband or wife madder than coming home and having a snow-covered dinner.
+
+Play with the angles. Here's another little happy bush Let's do it again then, what the heck. Let's do that again.
+
+The secret to doing anything is believing that you can do it. Anything that you believe you can do strong enough, you can do. Anything. As long as you believe. You can create anything that makes you happy. Now we can begin working on lots of happy little things. Get away from those little Christmas tree things we used to make in school.
+
+### You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it. It's beautiful - and we haven't even done anything to it yet. Don't be afraid to make these big decisions. Once you start, they sort of just make themselves. 
+
+You have to make those little noises or it won't work. If these lines aren't straight, your water's going to run right out of your painting and get your floor wet. I guess I'm a little weird. I like to talk to trees and animals. That's okay though; I have more fun than most people. Poor old tree. Remember how free clouds are. They just lay around in the sky all day long. This is the fun part
+
+> Each highlight must have it's own private shadow. Let's give him a friend too. Everybody needs a friend. So often we avoid running water, and running water is a lot of fun. This is the way you take out your flustrations.
+
+If you didn't have baby clouds, you wouldn't have big clouds. There is no right or wrong - as long as it makes you happy and doesn't hurt anyone. All you have to learn here is how to have fun. And just raise cain. Don't fiddle with it all day. All kinds of happy little splashes.
+
