@@ -14,13 +14,16 @@ const BlogPost = ({ data, children }) => {
   );
 };
 
-
 export const query = graphql`
   query ($id: String) {
-    mdx(id: { eq: $id }) {
-      frontmatter {
-        title
-        date(formatString: "MMMM D, YYYY")
+    allFile(filter: { id: { eq: $id }, ext: { in: [".md", ".mdx"] } }) {
+      nodes {
+        childMdx {
+          frontmatter {
+            title
+            date(formatString: "MMMM D, YYYY")
+          }
+        }
       }
     }
   }
