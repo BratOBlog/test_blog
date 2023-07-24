@@ -18,6 +18,6 @@ collections:
     path: "{{title}}/index"
     fields: # The fields for each document, usually in front matter
       - {label: "title", name: "title", widget: "string"}
-      - {label: "date", name: "date", widget: "datetime", default: "", format: "MMM Do YY"}
+      - {label: "date", name: "date", widget: "datetime", default: "", format: "YY MMM Do"}
       - { label: Slug, name: slug, encoding: "ascii", required: true, widget: string, hint: 'remember-to-use-lowercase-and-dashes' }
       - {label: "Body", name: "body", widget: "markdown"}
