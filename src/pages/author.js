@@ -2,6 +2,9 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
+import Carousel from "../components/carousel";
+
+
 
 const AboutPage = () => {
   return (
@@ -32,6 +35,9 @@ const AboutPage = () => {
           posting more important posts on my Website for all of you. Please give
           your support and love. Thanks For Visiting Our Site Have a nice day!
         </p>
+
+
+        <Carousel />
       </Layout>
     </main>
   );
