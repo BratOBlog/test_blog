@@ -1,10 +1,11 @@
 ---
 title: "Testing query "
-date: 2023 Jul 24th
+date: 2023-Aug-2
 slug: testing-query
 ---
 
-Poor old tree. Here's another little happy bush Of course he's a happy little stone, cause we don't have any other kind.
+# Poor old tree.
+ Here's another little happy bush Of course he's a happy little stone, cause we don't have any other kind. 
 
 I will take some magic white, and a little bit of Vandyke brown and a little touch of yellow. It's so important to do something every day that will make you happy. You can't make a mistake. Anything that happens you can learn to use - and make something beautiful out of it.
 
