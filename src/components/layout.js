@@ -41,6 +41,12 @@ const Layout = ({ pageTitle, children }) => {
                 Author
               </Link>
             </li>
+
+            <li>
+            <Link to="/blog/blog">
+              Blog
+            </Link>
+          </li>
             <GoogleSearch />
           </ul>
         </nav>

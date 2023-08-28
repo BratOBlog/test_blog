@@ -6,6 +6,13 @@ import Seo from "../components/seo";
 import MyQuote from "../pages/blog/quote";
 
 const IndexPage = ({ data }) => {
+
+
+  const mdxNodes = data.allMdx.nodes;
+  const markdownNodes = data.allMarkdownRemark.edges.map(edge => edge.node);
+
+  const allNodes = [...mdxNodes, ...markdownNodes];
+  
   return (
     <main pageTitle="Home Page">
       <Layout>
@@ -29,23 +36,23 @@ const IndexPage = ({ data }) => {
         </hero>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {data.allMdx.nodes.map((node) => (
-            <article
-              className="bg-white rounded-xl shadow-md overflow-hidden"
-              key={node.id}
-            >
-              <div className="p-6">
-                <h2 className="text-blue-500 font-extrabold text-3xl mb-4">
-                  <Link to={`/blog/${node.frontmatter.slug}`}>
-                    {node.frontmatter.title}
-                  </Link>
-                </h2>
-                <p className="text-sm text-gray-500 mb-2">
-                  Posted: {node.frontmatter.date}
-                </p>
-                <p className="text-base mb-6">{node.excerpt}</p>
-                <hr />
-              </div>
+        {allNodes.map(node => (
+          <article
+            className="bg-white rounded-xl shadow-md overflow-hidden"
+            key={node.id}
+          >
+            <div className="p-6">
+              <h2 className="text-blue-500 font-extrabold text-3xl mb-4">
+                <Link to={`/blog/${node.frontmatter.slug}`}>
+                  {node.frontmatter.title}
+                </Link>
+              </h2>
+              <p className="text-sm text-gray-500 mb-2">
+                Posted: {node.frontmatter.date}
+              </p>
+              <p className="text-base mb-6">{node.excerpt || node.node.excerpt}</p>
+              <hr />
+            </div>
             </article>
           ))}
         </div>
@@ -55,7 +62,7 @@ const IndexPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query {
+  {
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
@@ -65,6 +72,18 @@ export const query = graphql`
         }
         id
         excerpt
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            date
+            slug
+            title
+          }
+          excerpt
+        }
       }
     }
   }
