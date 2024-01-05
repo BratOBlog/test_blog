@@ -43,7 +43,7 @@ const Layout = ({ pageTitle, children }) => {
             </li>
 
             <li>
-            <Link to="/blog/blog">
+            <Link to="/blog">
               Blog
             </Link>
           </li>
