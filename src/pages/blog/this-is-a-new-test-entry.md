@@ -1,7 +1,7 @@
 ---
 title: "This is a new test entry "
 date: 2024-Jan-8
-slug: test_entry_4
+slug: test-entry-4
 ---
  Harnessing the Power of the Sun: Exploring the Marvels of Solar Energy
 
