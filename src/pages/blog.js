@@ -41,7 +41,7 @@ export const query = graphql`
         frontmatter {
           slug
           title
-          date(formatString: "YYYY-MM-DD")
+          date
         }
         excerpt(pruneLength: 150)
       }

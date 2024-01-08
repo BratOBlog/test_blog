@@ -20,7 +20,7 @@ export const query = graphql`
 query ($id: String!) {
   markdownRemark(id: { eq: $id }) {
     frontmatter {
-      date(formatString: "MMMM DD, YYYY")
+      date
       title
     }
     html
